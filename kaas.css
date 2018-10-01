@@ -1,0 +1,34 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display:grid;
+    grid-template-columns: 0 1fr 1fr;
+    grid-gap: 0px;
+    grid-template-areas: 
+    "menu   title   title"
+    "menu   main    main"
+    "menu   info    info"
+    "menu   blog    blog"
+    "menu   footer  footer"
+}
+
+
+#header{
+    grid-area: title;
+}
+#menu{
+    grid-area: menu;
+}
+#main{
+    grid-area: main;
+}
+#info{
+    grid-area: info;
+}
+#blog{
+    grid-area: blog;
+}
+
+#footer{
+    grid-area: footer;
+}
