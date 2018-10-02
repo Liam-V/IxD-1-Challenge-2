@@ -25,24 +25,85 @@ body{
 
 #header{
     grid-area: title;
-    background-color:yellow;
+    background-color:hsla(52, 95%, 56%, 0.90);
+    display:grid;
+    grid-template-columns:1fr 2fr 2fr 2fr;
+    grid-template-areas:
+    "menutoggle space1 logo space2";
 }
+
+.menutoggle{
+    display:flex;
+    align-self:center;
+    justify-content: center;
+    grid-area:menutoggle;
+}
+
+#logo{
+    grid-area:logo;
+     display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 #menu{
     grid-area: menu;
-    background-color:red;
+    background-color:rgba(128, 128, 128, 0.50);
 }
 #main{
     grid-area: main;
-}
-#info{
-    grid-area: info;
-}
-#blog{
-    grid-area: blog;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
+#main p {
+    padding-left:5%;
+    padding-right: 5%;
+    background-color:rgba(249, 221, 36, 0.5);
+    }
+
+#info{
+    grid-area: info;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(249, 221, 36, 0.5);
+}
+#info p {
+padding-left:5%;
+padding-right: 5%;
+}
+
+
+#blog{
+    grid-area: blog;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(249, 221, 36, 0.5);
+    
+}
+#blogcontent{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "blogtext blogpic";
+}
+
+#blogtext{
+    grid-area:blogtext;
+}
+
+#blogpic{
+    grid-area:blogpic;
+}
 #footer{
     grid-area: footer;
+    background-color:hsla(52, 95%, 56%, 0.90);
+   
 }
 
 
@@ -114,17 +175,18 @@ nav {
   }
   
   
-  @media only screen and (min-width: 601px){
+  @media only screen and (min-width: 1024px){
     body{
+      
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr ;
+      grid-template-columns: repeat(3,1fr) ;
       grid-gap: 10px;
       grid-template-areas: 
-            "title title title"
-            "menu  menu  menu"
-            "main  main  ad1"
-            "main  main  ad2"
-            "foot  foot  foot"; 
+            "title   title   title"
+            "menu    menu    menu"
+            "main    main    info"
+            "main    main    blog"
+            "footer  footer  footer"; 
     }
   
     
@@ -137,4 +199,9 @@ nav {
     /*nav ul li {
       padding: 0.5em;
     }*/
-  }
+    .menutoggle{
+        display: none;
+    }  
+
+}
+

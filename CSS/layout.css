@@ -1,0 +1,98 @@
+
+p{
+    margin: 0;
+}
+
+
+.blogger {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 5px 0;
+    
+}
+
+.team {
+    width: 100%;
+    height: auto;
+    
+}
+
+#main{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    
+}
+
+
+#info{
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+#blog{
+    border-top:solid black 1px;
+    
+    font-size: 12px;
+}
+
+#footer{
+    
+}
+
+
+#adress{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 5%;
+}
+
+#nummer{
+    display:flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 5%;
+}
+
+.read-more-state {
+    display: none;
+  }
+  
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+  
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+   text-align: center;
+  }
+
+  
+  
+  .read-more-state ~ .read-more-trigger:before {
+    content: 'Show more';
+  }
+  
+  .read-more-state:checked ~ .read-more-trigger:before {
+    content: 'Show less';
+  }
+  
+  .read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    color: #666;
+    font-size: .9em;
+    line-height: 2;
+    border: 1px solid #ddd;
+    border-radius: .25em;
+  }
